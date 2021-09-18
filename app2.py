@@ -92,8 +92,10 @@ async def play(ctx, *,query):
         
         async with ctx.typing():
             video, source = search(query)
+            print(source)
             #filename = await YTDLSource.from_url(url, loop=bot.loop)
             voice_channel.play(discord.FFmpegPCMAudio(source, **FFMPEG_OPTS), after=lambda e: print('done', e))        
+            print(2)
             voice_channel.is_playing()
         await ctx.send('**Now playing:** {}'.format(query))
     except:
