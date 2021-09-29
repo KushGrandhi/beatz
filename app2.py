@@ -58,9 +58,6 @@ class YTDLSource(discord.PCMVolumeTransformer):
 async def play(ctx,url):
     
     await ctx.send('play!')
-    #if not ctx.message.author.name=="Rohan Krishna" :
-         #await ctx.send('NOT AUTHORISED!')
-         #return
     try :
         server = ctx.message.guild
         voice_channel = server.voice_client
@@ -83,9 +80,6 @@ async def play(ctx, *,query):
     
     await ctx.send('Streaming!')
     FFMPEG_OPTS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
-    #if not ctx.message.author.name=="Rohan Krishna" :
-         #await ctx.send('NOT AUTHORISED!')
-         #return
     try :
         server = ctx.message.guild
         voice_channel = server.voice_client
