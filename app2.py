@@ -152,7 +152,8 @@ async def on_ready():
     for guild in bot.guilds:
         for channel in guild.text_channels :
             if str(channel) == "general" :
-                await channel.send('Bot Activated..')
+                #await channel.send('Bot Activated..')
+                pass
                 #await channel.send(file=discord.File('giphy.png'))
         print('Active in {}\n Member Count : {}'.format(guild.name,guild.member_count))
 
